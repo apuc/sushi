@@ -8,8 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
-	<div class="page">
-		<header class="page all_head">
+	<div>
+		<header class="catalog_page all_head">
 			<div class="row">
 				<div class="col-md-4 text-left head_l">
 					<a href="#">
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 		</header>
-		<nav role="navigation" class="navbar navbar-default page">
+		<nav role="navigation" class="navbar navbar-default catalog_page">
 			<div class="navbar-header">
 			    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
 			      <span class="sr-only">Toggle navigation</span>
@@ -59,7 +59,7 @@
 			<div class="bread"><a href="#">Главная</a> » <a href="#">Роллы</a></div>
 		</div>				
 	</div>
-	<div class="page cat_block">
+	<div class="catalog_page cat_block">
 		<div class="row">
 			<div class="col-md-12">
 				<h1>Роллы</h1>
@@ -168,14 +168,14 @@
 			</div>			
 		</div>		
 	</div>
-	<div class="page content_block">
+	<div class="catalog_page content_block">
 		<div class="row sales">
 			<div class="col-sm-4 text-left"><img src="img/sale1.jpg" alt=""></div>
 			<div class="col-sm-4 text-center"><img src="img/sale2.jpg" alt=""></div>
 			<div class="col-sm-4 text-right"><img src="img/sale3.jpg" alt=""></div>
 		</div>
 	</div>
-	<div class="page">
+	<div class="catalog_page">
 		<div class="content">
 			<p><strong>Доставка роллов под заказ в любую точку Москвы</strong><br>Доставка роллов удобна всем клиентам, независимо от места дислокации дома или офиса. Мы гарантируем, что блюдо будет стоять на вашем столе через небольшой отрезок времени после оформления заказа. От вас зависит только выбор оптимального варианта. Наши повара удовлетворяют потребности клиентов с разными вкусовыми предпочтениями.
 			Перед тем, как будет выполнена доставка роллов по Москве, посетитель сайта смотрит каталог, включающий в себя 57 вариантов блюд. Чтобы не тратить время на определение, напишите онлайн-консультанту, который даст полезные подсказки.  
@@ -185,7 +185,7 @@
 			<p><strong>Решили заказать роллы в первый раз? Суши с крабом в подарок от шеф-повара!</strong><br>Мы организовали удобный для клиентов рабочий график. Прием заказов начинается в 10 утра, а заканчивается в 23:00. В это же время</p>
 		</div>
 	</div>
-	<footer class="page">
+	<footer class="catalog_page">
 		<div class="row">
 			<div class="col-md-6">
 				<ul class="social">
@@ -220,6 +220,63 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<div class="basket">
+		<div class="head">Корзина<br><img src="img/basket_down.png" alt="Корзина"></div>
+		<div class="body">
+			<h3 class="text-center">ВАШ ЗАКАЗ</h3>
+			<a href="#" class="clear_all">Очистить корзину</a>
+			<ul class="order">
+				<li>
+					<div class="img">
+						<img src="img/basket_order.jpg" alt=""><br>
+						<a href="#" class="clear">x</a>
+					</div>
+					<div class="info">
+						Калифорния<br>
+						<input type="text" class="form-control" value="2">
+						<span class="price">355 <span class="rouble">a</span></span>
+					</div>
+					<div class="clearfix"></div>
+				</li>
+				<li>
+					<div class="img">
+						<img src="img/basket_order.jpg" alt=""><br>
+						<a href="#" class="clear">x</a>
+					</div>
+					<div class="info">
+						Калифорния<br>
+						<input type="text" class="form-control" value="2">
+						<span class="price">355 <span class="rouble">a</span></span>
+					</div>
+					<div class="clearfix"></div>
+				</li>
+			</ul>
+			<div class="clearfix"></div>
+			<h3 class="text-center">Сумма: <strong>710 <span class="rouble">a</span></strong></h3>
+			<div class="basket_logo"><img src="img/basket_logo.png" alt=""></div>
+			<div class="pay_type">
+				<h3>Выберите вид оплаты:</h3>
+				<table>
+					<tr>
+						<td><input type="radio"></td>
+						<td><img src="img/paytype1.png"></td>
+						<td colspan="2" class="text">Наличные<br>курьеру <strong>600 <span class="rouble">a</span></strong></td>
+					</tr>
+					<tr>
+						<td><input type="radio"></td>
+						<td><img src="img/paytype2.png"></td>
+						<td><img src="img/paytype3.png"></td>
+						<td class="text">Карта, эл.деньги<br>(+2,9%) <strong>612 <span class="rouble">a</span></strong></td>
+					</tr>
+				</table>
+			</div>
+			<div class="footer">
+				<button>Оформить</button>
+			</div>
+		</div>
+	</div>
 
 
 	<div id="tovar" class="modal fade">
@@ -259,6 +316,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/slider.js"></script>
 	<script src="js/tovar_amount.js"></script>
+	<script src="js/top_menu.js"></script>
 	<script src="js/jq.js"></script>
 	<script type="text/javascript" src="//vk.com/js/api/openapi.js?120"></script>
 	<script type="text/javascript">VK.Widgets.Group("vk_groups", {mode: 0, width: "240", height: "264", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 90425587);
