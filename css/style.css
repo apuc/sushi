@@ -670,7 +670,7 @@ a.back:hover {
 	line-height: 1.0;
 	background: linear-gradient(to bottom, #ffffff 0%,#dadada 100%)!important;
 }
-.tovar_amount span a:hover {
+.tovar_amount span a:hover, .tovar_amount span a:focus {
 	text-decoration: none;
 }
 .tovar_price {
