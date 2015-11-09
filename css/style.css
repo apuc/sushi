@@ -682,8 +682,34 @@ a.back:hover {
 	margin-top: 3px;
 }
 
-
-
+#tovar .modal-dialog {
+	margin-top: 230px!important;
+	width: 80%!important;
+	padding: 10px 25px 25px!important;
+}
+#tovar .modal-header {
+	border-bottom: 0!important;
+	padding: 5px 15px!important;
+}
+#tovar .row {
+	width: 100%!important;
+}
+#tovar h1 {
+	margin: -10px 0 10px!important;
+	text-align: left;
+}
+#tovar .tovar_amount, #tovar .tovar_price {
+	margin-top: 10px;
+}
+#tovar .tovar_img {
+	padding-right: 10px;
+}
+#tovar .tovar_info {
+	padding-left: 10px;
+}
+p.red {
+	color: #ff0000;
+}
 
 
 

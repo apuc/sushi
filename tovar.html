@@ -65,10 +65,10 @@
 				<h1>Сяке Маке</h1>
 				<a href="#" class="back">Назад к выбору</a>
 				<div class="row">
-					<div class="col-sm-5">
+					<div class="col-sm-5 tovar_img">
 						<img src="img/img2.jpg" alt="Сяке Маке" class="img-responsive">
 					</div>
-					<div class="col-sm-7">
+					<div class="col-sm-7 tovar_info">
 						<p><strong>Сяке Маке</strong></p>
 						<p>Вкус блюда: ничего лишнего, только особый вкус копченого лосося, завернутого в варенный рис и при этом завернут в сухие водоросли нори. Этот эксклюзивный продукт питания сможет подойти любому заядлому любителю суш.</p>
 						<p>Заказ и доставка: закажите «Кунсей маки» у нас, и мы сможем вас удивить способом подачи блюда и, конечно, вкусно накормить. Доставка осуществляется с 10 до 23.</p>
@@ -198,6 +198,38 @@
 		</div>
 	</footer>
 
+	<div id="tovar" class="modal fade">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <!-- Заголовок модального окна -->
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	      </div>
+	      <!-- Основной текст сообщения -->
+	      <div class="modal-body">
+	        <div class="row">
+	        	<div class="col-sm-6"><img src="img/img2.jpg" alt="Сяке Маке" class="img-responsive"></div>
+	        	<div class="col-sm-6">
+	        		<h1>Сяке Маке</h1>
+	        		<p class="red">300 г</p>
+	        		<p>Лосось, авокадо, сыр, рис.</p>
+	        		<div class="input-group tovar_amount">
+						<span class="input-group-addon"><a href="#" id="less_amount">-</a></span>
+						<input type="text" class="form-control" value="1" id="tovar_amount">
+						<span class="input-group-addon"><a href="#" id="more_amount">+</a></span>
+					</div>
+					<div class="tovar_price">
+						<div class="cat_price">355 <span class="rouble">a</span></div>
+						<div class="cat_buy"><button>Заказать</button></div>
+					</div>
+					<div class="clearfix"></div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 
 	<div class="basket">
 		<div class="head">Корзина<br><img src="img/basket_down.png" alt="Корзина"></div>
@@ -271,5 +303,13 @@
   js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(document).on('click', '.catalog a', function(e) {
+			e.preventDefault();
+			$('#tovar').modal('show');
+		});
+	});
+</script>
 </body>
 </html>
