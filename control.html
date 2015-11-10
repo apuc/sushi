@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 	<div class="page">
@@ -73,8 +74,8 @@
 							<p>
 								Когда произошло? *
 								<div class="input-group date">
-								    <input type="text" class="form-control">
-								    <span class="input-group-addon"><img src="img/calendar.png" alt="Выбрать дату"></span>
+								    <input type="text" class="form-control" id="datepicker">
+								    <span class="input-group-addon choose_date"><img src="img/calendar.png" alt="Выбрать дату"></span>
 								</div>
 							</p>
 							<p>Контактный телефон * <input type="text" class="form-control"></p>
@@ -144,9 +145,11 @@
 			</div>
 		</div>
 	</footer>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/slider.js"></script>
+	<script src="js/slider.js"></script>	
+	<script src="js/jquery-ui.min.js"></script>
+	<!--
 	<script src="js/jq.js"></script>
 	<script type="text/javascript" src="//vk.com/js/api/openapi.js?120"></script>
 	<script type="text/javascript">VK.Widgets.Group("vk_groups", {mode: 0, width: "240", height: "264", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 90425587);
@@ -158,6 +161,22 @@
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));</script>-->
+<script type="text/javascript">
+$(document).ready(function() {
+
+   $("#datepicker").datepicker({
+      monthNames:["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+      dayNamesMin:["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+      firstDay:1,
+      dateFormat:"dd.mm.yy"
+   });
+
+   $('.choose_date').click(function() {
+   	  $("#datepicker").datepicker('show');
+   });
+
+});
+</script>
 </body>
 </html>
