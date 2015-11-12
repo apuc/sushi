@@ -749,7 +749,7 @@ p.red {
 	-webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.6);
 	-moz-box-shadow:    0px 3px 5px 0px rgba(0, 0, 0, 0.6);
 	box-shadow:         0px 0px 5px 1px rgba(0, 0, 0, 0.6);
-	z-index: 200;
+	z-index: 500;
 }
 .basket > .head {
 	text-align: center;
